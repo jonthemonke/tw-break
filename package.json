@@ -26,13 +26,6 @@
           "source.ts",
           "source.js"
         ]
-      },
-      {
-        "scopeName": "tw-breakpoint-css.injection",
-        "path": "./syntaxes/cssInjection.json",
-        "injectTo": [
-          "source.css"
-        ]
       }
     ],
     "configurationDefaults": {
