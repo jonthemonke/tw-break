@@ -1,9 +1,13 @@
-# Change Log
+# Changelog
 
-All notable changes to the "tsx" extension will be documented in this file.
+All notable changes to this project will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [Current]
+
+- v0.0.1
 
 ## [Unreleased]
 
-- Initial release
+[current]: https://github.com/jonny-lake/tw-break/0.0.1
+[unreleased]: https://github.com/jonny-lake/tw-break
+[0.0.1]: https://github.com/jonny-lake/tw-break/0.0.1
