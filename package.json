@@ -7,6 +7,11 @@
   "engines": {
     "vscode": "^1.72.0"
   },
+  "icon": "images/tw-logo.png",
+  "author": {
+    "name": "Jonathan Lake",
+    "url": "https://jlake.co/"
+  },
   "repository": {
     "url": "https://github.com/jonny-lake/tw-break"
   },
