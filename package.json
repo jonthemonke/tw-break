@@ -3,9 +3,12 @@
   "displayName": "tw-breakpoint",
   "description": "An extension that applies colors to inline tailwind css breakpoints.",
   "version": "0.0.1",
-  "publisher": "",
+  "publisher": "jonnythemonke",
   "engines": {
     "vscode": "^1.72.0"
+  },
+  "repository": {
+    "url": "https://github.com/jonny-lake/tw-break"
   },
   "categories": [
     "Themes",
