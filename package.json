@@ -1,0 +1,182 @@
+{
+  "name": "tw-breakpoint",
+  "displayName": "tw-breakpoint",
+  "description": "An extension that applies colors to inline tailwind css breakpoints.",
+  "version": "0.0.1",
+  "publisher": "",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Themes",
+    "Formatters",
+    "Other"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "tw-breakpoint.injection",
+        "path": "./syntaxes/injection.json",
+        "injectTo": [
+          "source.tsx",
+          "source.jsx",
+          "source.ts",
+          "source.js"
+        ]
+      },
+      {
+        "scopeName": "tw-breakpoint-css.injection",
+        "path": "./syntaxes/cssInjection.json",
+        "injectTo": [
+          "source.css"
+        ]
+      }
+    ],
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "twbreak.xs",
+            "settings": {
+              "foreground": "#8de188",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.xs1",
+            "settings": {
+              "foreground": "#8de188",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.xs2",
+            "settings": {
+              "foreground": "#6edd68",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.xs3",
+            "settings": {
+              "foreground": "#55de4e",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.sm",
+            "settings": {
+              "foreground": "#e18988",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.sm1",
+            "settings": {
+              "foreground": "#e18988",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.sm2",
+            "settings": {
+              "foreground": "#e55f5c",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.sm3",
+            "settings": {
+              "foreground": "#e4423f",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.md",
+            "settings": {
+              "foreground": "#ba96e3",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.md1",
+            "settings": {
+              "foreground": "#ba96e3",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.md2",
+            "settings": {
+              "foreground": "#ae7fe4",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.md3",
+            "settings": {
+              "foreground": "#9e60e6",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.lg",
+            "settings": {
+              "foreground": "#dbe3b6",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.lg1",
+            "settings": {
+              "foreground": "#dbe3b6",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.lg2",
+            "settings": {
+              "foreground": "#d1df92",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.lg3",
+            "settings": {
+              "foreground": "#c7dc66",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.xl",
+            "settings": {
+              "foreground": "#9ddee3",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.xl1",
+            "settings": {
+              "foreground": "#9ddee3",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.xl2",
+            "settings": {
+              "foreground": "#71dbe3",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.xl3",
+            "settings": {
+              "foreground": "#36d5e0",
+              "fontStyle": "italic"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
