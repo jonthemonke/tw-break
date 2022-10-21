@@ -220,7 +220,7 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 0.0.1
+### 1.0.0
 
 Initial release of tw-breakpoint! Thanks for using this extension <3
 
