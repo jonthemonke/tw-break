@@ -237,10 +237,6 @@ module.exports = {
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
 - `tw-breakpoint.enable`: Enable/disable this extension.
