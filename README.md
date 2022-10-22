@@ -250,7 +250,7 @@ This extension contributes the following settings:
 
 ### 1.0.1
 
-Added support for .vue, .erb, and .html files.
+Added support for .vue, .erb, and .html files. Also added support for "2xl" breakpoint tag.
 
 ### 0.0.1
 
