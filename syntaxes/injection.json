@@ -1,6 +1,6 @@
 {
   "scopeName": "tw-breakpoint.injection",
-  "injectionSelector": "R:string.quoted.double",
+  "injectionSelector": "L:string.quoted.double",
   "patterns": [
     {
       "include": "#xs-keyword"
@@ -61,6 +61,18 @@
     },
     {
       "include": "#xl3-keyword"
+    },
+    {
+      "include": "#2xl-keyword"
+    },
+    {
+      "include": "#2xl1-keyword"
+    },
+    {
+      "include": "#2xl2-keyword"
+    },
+    {
+      "include": "#2xl3-keyword"
     }
   ],
   "repository": {
@@ -143,6 +155,22 @@
     "xl3-keyword": {
       "match": "xl3:",
       "name": "twbreak.xl3"
+    },
+    "2xl-keyword": {
+      "match": "2xl:",
+      "name": "twbreak.2xl"
+    },
+    "2xl1-keyword": {
+      "match": "2xl1:",
+      "name": "twbreak.2xl1"
+    },
+    "2xl2-keyword": {
+      "match": "2xl2:",
+      "name": "twbreak.2xl2"
+    },
+    "2xl3-keyword": {
+      "match": "2xl3:",
+      "name": "twbreak.2xl3"
     }
   }
 }

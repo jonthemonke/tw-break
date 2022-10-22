@@ -6,7 +6,7 @@ tw-breakpoint is a tailwind-css inline syntax highlighter to help keep your brea
 
 ## Features
 
-- Set up to 20 color tags for inline tailwind-css in .tsx, .jsx, .ts, and .js files: (default colors are shown below)
+- Set up to 24 color tags for inline tailwind-css in .tsx, .jsx, .ts, .js, .html, .vue, and .erb files: (default colors are shown below)
 
 ![Inline colors](images/docex.png)
 
@@ -14,13 +14,13 @@ tw-breakpoint is a tailwind-css inline syntax highlighter to help keep your brea
 
 ### Setup:
 
-mix and match any of the following screen `key, value pairs` in your `tailwind.config.js` file:
+mix and match any of the following screen size `keys` in your `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,vue,erb,html}",
+    "./components/**/*.{js,ts,jsx,tsx,vue,erb,html}",
   ],
   theme: {
     screens: {
@@ -44,6 +44,10 @@ module.exports = {
       xl1: "1500px",
       xl2: "2200px",
       xl3: "3600px",
+      2xl: "4000px",
+      2xl1: "4500px",
+      2xl2: "5000px",
+      2xl3: "5500px"
     },
   },
 
@@ -198,6 +202,34 @@ module.exports = {
               "foreground": "#36d5e0",
               "fontStyle": "italic"
             }
+          },
+          {
+            "scope": "twbreak.2xl",
+            "settings": {
+              "foreground": "#e39cd2",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.2xl1",
+            "settings": {
+              "foreground": "#e39cd2",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.2xl2",
+            "settings": {
+              "foreground": "#e074c7",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.2xl3",
+            "settings": {
+              "foreground": "#e049bd",
+              "fontStyle": "italic"
+            }
           }
         ]
       }
@@ -219,6 +251,10 @@ This extension contributes the following settings:
 ## Known Issues
 
 ## Release Notes
+
+### 1.0.1
+
+Added support for .vue, .erb, and .html files.
 
 ### 0.0.1
 

@@ -21,6 +21,29 @@
     "Other"
   ],
   "contributes": {
+    "languages": [
+      {
+        "id": "typescriptreact"
+      },
+      {
+        "id": "typescript"
+      },
+      {
+        "id": "vue"
+      },
+      {
+        "id": "erb"
+      },
+      {
+        "id": "html"
+      },
+      {
+        "id": "javascript"
+      },
+      {
+        "id": "javascriptreact"
+      }
+    ],
     "grammars": [
       {
         "scopeName": "tw-breakpoint.injection",
@@ -29,7 +52,10 @@
           "source.tsx",
           "source.jsx",
           "source.ts",
-          "source.js"
+          "source.js",
+          "source.vue",
+          "text.html.erb",
+          "text.html.derivative"
         ]
       }
     ],
@@ -173,6 +199,34 @@
             "scope": "twbreak.xl3",
             "settings": {
               "foreground": "#36d5e0",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.2xl",
+            "settings": {
+              "foreground": "#e39cd2",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.2xl1",
+            "settings": {
+              "foreground": "#e39cd2",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.2xl2",
+            "settings": {
+              "foreground": "#e074c7",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": "twbreak.2xl3",
+            "settings": {
+              "foreground": "#e049bd",
               "fontStyle": "italic"
             }
           }
