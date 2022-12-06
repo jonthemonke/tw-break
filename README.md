@@ -6,7 +6,7 @@ tw-breakpoint is a tailwind-css inline syntax highlighter to help keep your brea
 
 ## Features
 
-- Set up to 24 color tags for inline tailwind-css in .tsx, .jsx, .ts, .js, .html, .vue, and .erb files: (default colors are shown below)
+- Set up to 24 color tags for inline tailwind-css in .tsx, .jsx, .ts, .js, .html, .astro, .vue, and .erb files: (default colors are shown below)
 
 ![Inline colors](images/docex.png)
 
@@ -247,6 +247,10 @@ This extension contributes the following settings:
 ## Known Issues
 
 ## Release Notes
+
+### 1.0.2
+
+Added support for .astro files.
 
 ### 1.0.1
 

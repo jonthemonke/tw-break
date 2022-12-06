@@ -42,6 +42,9 @@
       },
       {
         "id": "javascriptreact"
+      },
+      {
+        "id": "astro"
       }
     ],
     "grammars": [
@@ -54,6 +57,7 @@
           "source.ts",
           "source.js",
           "source.vue",
+          "source.astro",
           "text.html.erb",
           "text.html.derivative"
         ]
