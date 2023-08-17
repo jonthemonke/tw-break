@@ -8,12 +8,14 @@ All notable changes to this project will be documented in this file.
 - [1.0.0]: first release
 - [1.0.1]: added support for .vue, .erb, and .html file extensions
 - [1.0.2]: added support for .astro file extension
+- [1.0.3]: added support for .php file extension
 
 ## [Unreleased]
 
-[current]: https://github.com/jonny-lake/tw-break/tree/1.0.2
+[current]: https://github.com/jonny-lake/tw-break/tree/1.0.3
 [unreleased]: https://github.com/jonny-lake/tw-break
 [0.0.1]: https://github.com/jonny-lake/tw-break/tree/0.0.1
 [1.0.0]: https://github.com/jonny-lake/tw-break/tree/1.0.0
 [1.0.1]: https://github.com/jonny-lake/tw-break/tree/1.0.1
 [1.0.2]: https://github.com/jonny-lake/tw-break/tree/1.0.2
+[1.0.3]: https://github.com/jonny-lake/tw-break/tree/1.0.3
