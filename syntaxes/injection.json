@@ -1,6 +1,9 @@
 {
   "scopeName": "tw-breakpoint.injection",
-  "injectionSelector": "L:string.quoted.double",
+  "injectionSelector": [
+    "L:string.quoted.double",
+    "L:string.quoted.single"
+  ],
   "patterns": [
     {
       "include": "#xs-keyword"

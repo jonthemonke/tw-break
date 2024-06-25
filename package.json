@@ -2,7 +2,7 @@
   "name": "tw-breakpoint",
   "displayName": "tw-breakpoint",
   "description": "An extension that applies colors to inline tailwind css breakpoints.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "jonnythemonke",
   "engines": {
     "vscode": "^1.72.0"
@@ -48,6 +48,9 @@
       },
       {
         "id": "php"
+      },
+      {
+        "id": "twig"
       }
     ],
     "grammars": [
@@ -63,7 +66,8 @@
           "source.astro",
           "text.html.erb",
           "text.html.derivative",
-          "text.html.php"
+          "text.html.php",
+          "text.html.twig"
         ]
       }
     ],
