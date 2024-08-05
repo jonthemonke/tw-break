@@ -10,10 +10,11 @@ All notable changes to this project will be documented in this file.
 - [1.0.2]: added support for .astro file extension
 - [1.0.3]: added support for .php file extension
 - [1.0.4]: added support for .twig file extension and single quotes
+- [1.0.5]: fix broken .astro support
 
 ## [Unreleased]
 
-[current]: https://github.com/jonthemonke/tw-break/tree/1.0.4
+[current]: https://github.com/jonthemonke/tw-break/tree/1.0.5
 [unreleased]: https://github.com/jonthemonke/tw-break
 [0.0.1]: https://github.com/jonthemonke/tw-break/tree/0.0.1
 [1.0.0]: https://github.com/jonthemonke/tw-break/tree/1.0.0
@@ -21,3 +22,4 @@ All notable changes to this project will be documented in this file.
 [1.0.2]: https://github.com/jonthemonke/tw-break/tree/1.0.2
 [1.0.3]: https://github.com/jonthemonke/tw-break/tree/1.0.3
 [1.0.4]: https://github.com/jonthemonke/tw-break/tree/1.0.4
+[1.0.5]: https://github.com/jonthemonke/tw-break/tree/1.0.5

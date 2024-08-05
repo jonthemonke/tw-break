@@ -2,7 +2,8 @@
   "scopeName": "tw-breakpoint.injection",
   "injectionSelector": [
     "L:string.quoted.double",
-    "L:string.quoted.single"
+    "L:string.quoted.single",
+    "L:string.quoted"
   ],
   "patterns": [
     {
