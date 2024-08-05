@@ -3,7 +3,9 @@
   "injectionSelector": [
     "L:string.quoted.double",
     "L:string.quoted.single",
-    "L:string.quoted"
+    "L:string.quoted",
+    "L:meta.property-value.css",
+    "L:meta.property-name.css"
   ],
   "patterns": [
     {
