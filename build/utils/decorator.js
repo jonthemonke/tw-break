@@ -18,7 +18,7 @@ class Decorator {
         this.decorators = this.buildDecorators();
     }
     decorate(editor) {
-        if (editor == null) {
+        if (editor == null || editor == undefined) {
             return;
         }
         const document = editor.document;
@@ -42,7 +42,7 @@ class Decorator {
             this.decorators = this.buildDecorators();
         }
         const editor = vscode_1.window.activeTextEditor;
-        if (editor == null) {
+        if (editor == null || editor == undefined) {
             return;
         }
         const languageId = editor.document.languageId;

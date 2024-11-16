@@ -26,7 +26,7 @@ export class Decorator {
     }
 
     private decorate(editor: TextEditor) {
-        if (editor == null) {
+        if (editor == null || editor == undefined) {
             return
         }
 
@@ -55,7 +55,7 @@ export class Decorator {
             this.decorators = this.buildDecorators()
         }
         const editor = window.activeTextEditor
-        if (editor == null) {
+        if (editor == null || editor == undefined) {
             return
         }
 
