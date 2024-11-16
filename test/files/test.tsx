@@ -1,0 +1,5 @@
+import React from 'react';
+
+export function Test() {
+    return (<div className="xs: xs1: xs2: xs3: sm: sm1: sm2: sm3: md: md1: md2: md3: lg: lg1: lg2: lg3: xl: xl1: xl2: xl3: 2xl: 2xl1: 2xl2: 2xl3:"></div>)
+}
