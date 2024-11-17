@@ -19,7 +19,7 @@ Settings can be found under `Settings` (ctrl+comma) -> `Tailwind Breakpoint High
 
 The default breakpoint configuration format is shown below (edit `breakpoint` and `decoration` to your liking within each breakpoint entry, add new entries to the array where needed.
 
-Note: Additional CSS attributes may be passed into `decoration` (ex: `text-decoration: underline;` should be passed as `"textDecoration": "underline"`) but this has not been tested extensively and as such may cause unexpected behavior.
+Note: Additional CSS attributes may be passed into `decoration` (ex: `text-decoration: underline;` should be passed as `"textDecoration": "underline"`) but this has not been tested extensively and as such may cause unexpected behavior. Also note that order matters, 2xl should come before xl so that the matching is applied in order.
 
 ```json
 {

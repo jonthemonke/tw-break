@@ -18,9 +18,6 @@ class Decorator {
         this.decorators = this.buildDecorators();
     }
     decorate(editor) {
-        if (editor == null || editor == undefined) {
-            return;
-        }
         const document = editor.document;
         const text = document.getText();
         this.decorators.forEach((decorator) => {

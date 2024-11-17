@@ -17,8 +17,10 @@ export async function activate(context: ExtensionContext): Promise<void> {
     // register change callbacks
     // TODO: pass editor and events properly
     window.onDidChangeActiveTextEditor(
-        (_editor: TextEditor | undefined) => {
-            decorator.update()
+        (editor: TextEditor | undefined) => {
+            if (editor != undefined) {
+                decorator.update()
+            }
         },
         null,
         context.subscriptions
@@ -45,13 +47,13 @@ export async function activate(context: ExtensionContext): Promise<void> {
 export async function deactivate(): Promise<void> {
     // dispose everything
     if (decorator_ref) {
-        console.debug("Disposing decorator")
+        console.debug("Disposing tailwind breakpoint decorator.")
         decorator_ref?.dispose()
         decorator_ref = undefined
     }
 
     if (context_ref) {
-        console.debug("Disposing context")
+        console.debug("Disposing tailwind breakpoint context.")
         context_ref.subscriptions.forEach((sub) => {
             sub.dispose()
         })

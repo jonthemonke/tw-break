@@ -15,8 +15,10 @@ async function activate(context) {
     context_ref = context;
     // register change callbacks
     // TODO: pass editor and events properly
-    vscode_1.window.onDidChangeActiveTextEditor((_editor) => {
-        decorator.update();
+    vscode_1.window.onDidChangeActiveTextEditor((editor) => {
+        if (editor != undefined) {
+            decorator.update();
+        }
     }, null, context.subscriptions);
     vscode_1.workspace.onDidChangeTextDocument((_event) => {
         decorator.update();
@@ -32,12 +34,12 @@ exports.activate = activate;
 async function deactivate() {
     // dispose everything
     if (decorator_ref) {
-        console.debug("Disposing decorator");
+        console.debug("Disposing tailwind breakpoint decorator.");
         decorator_ref?.dispose();
         decorator_ref = undefined;
     }
     if (context_ref) {
-        console.debug("Disposing context");
+        console.debug("Disposing tailwind breakpoint context.");
         context_ref.subscriptions.forEach((sub) => {
             sub.dispose();
         });

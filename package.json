@@ -55,7 +55,8 @@
             "astro",
             "erb",
             "twig",
-            "css"
+            "css",
+            "tailwindcss"
           ]
         },
         "tailwind-breakpoint.breakpoints": {
