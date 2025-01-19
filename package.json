@@ -1,17 +1,22 @@
 {
   "name": "tw-breakpoint",
-  "displayName": "tw-breakpoint",
+  "displayName": "Tailwind Breakpoint Highlight",
   "description": "An extension that applies colors to inline tailwind css breakpoints.",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "publisher": "jonnythemonke",
   "engines": {
-    "vscode": "^1.72.0"
+    "vscode": "^1.74.0"
   },
   "icon": "images/tw-logo.png",
   "author": {
     "name": "Jonathan Lake",
     "url": "https://jlake.co/"
   },
+  "type": "commonjs",
+  "main": "build/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "repository": {
     "url": "https://github.com/jonny-lake/tw-break"
   },
@@ -20,230 +25,283 @@
     "Formatters",
     "Other"
   ],
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "breakpoint",
+    "highlight",
+    "theme"
+  ],
   "contributes": {
-    "languages": [
-      {
-        "id": "typescriptreact"
-      },
-      {
-        "id": "typescript"
-      },
-      {
-        "id": "vue"
-      },
-      {
-        "id": "erb"
-      },
-      {
-        "id": "html"
-      },
-      {
-        "id": "javascript"
-      },
-      {
-        "id": "javascriptreact"
-      },
-      {
-        "id": "astro"
-      },
-      {
-        "id": "php"
-      },
-      {
-        "id": "twig"
-      }
-    ],
-    "grammars": [
-      {
-        "scopeName": "tw-breakpoint.injection",
-        "path": "./syntaxes/injection.json",
-        "injectTo": [
-          "source.tsx",
-          "source.jsx",
-          "source.ts",
-          "source.js",
-          "source.vue",
-          "source.astro",
-          "text.html.erb",
-          "text.html.derivative",
-          "text.html.php",
-          "text.html.twig"
-        ]
-      }
-    ],
-    "configurationDefaults": {
-      "editor.tokenColorCustomizations": {
-        "textMateRules": [
-          {
-            "scope": "twbreak.xs",
-            "settings": {
-              "foreground": "#8de188",
-              "fontStyle": "italic"
+    "configuration": {
+      "title": "Tailwind Breakpoint Highlight",
+      "properties": {
+        "tailwind-breakpoint.languages": {
+          "title": "languages",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "html",
+            "svelte",
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact",
+            "vue",
+            "php",
+            "blade",
+            "astro",
+            "erb",
+            "twig",
+            "css",
+            "tailwindcss"
+          ]
+        },
+        "tailwind-breakpoint.breakpoints": {
+          "title": "breakpoints",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "breakpoint": {
+                "type": "string"
+              },
+              "decoration": {
+                "type": "object",
+                "properties": {
+                  "color": {
+                    "type": "string",
+                    "format": "color"
+                  },
+                  "fontStyle": {
+                    "type": "string",
+                    "enum": [
+                      "normal",
+                      "italic",
+                      "oblique"
+                    ]
+                  },
+                  "fontWeight": {
+                    "type": "string",
+                    "enum": [
+                      "normal",
+                      "bold",
+                      "bolder",
+                      "lighter"
+                    ]
+                  }
+                }
+              }
             }
           },
-          {
-            "scope": "twbreak.xs1",
-            "settings": {
-              "foreground": "#8de188",
-              "fontStyle": "italic"
+          "default": [
+            {
+              "breakpoint": "xs",
+              "decoration": {
+                "color": "#8de188",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "xs1",
+              "decoration": {
+                "color": "#8de188",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "xs2",
+              "decoration": {
+                "color": "#6edd68",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "xs3",
+              "decoration": {
+                "color": "#55de4e",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "sm",
+              "decoration": {
+                "color": "#e18988",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "sm1",
+              "decoration": {
+                "color": "#e18988",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "sm2",
+              "decoration": {
+                "color": "#e55f5c",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "sm3",
+              "decoration": {
+                "color": "#e4423f",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "md",
+              "decoration": {
+                "color": "#ba96e3",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "md1",
+              "decoration": {
+                "color": "#ba96e3",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "md2",
+              "decoration": {
+                "color": "#ae7fe4",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "md3",
+              "decoration": {
+                "color": "#9e60e6",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "lg",
+              "decoration": {
+                "color": "#dbe3b6",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "lg1",
+              "decoration": {
+                "color": "#dbe3b6",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "lg2",
+              "decoration": {
+                "color": "#d1df92",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "lg3",
+              "decoration": {
+                "color": "#c7dc66",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "2xl",
+              "decoration": {
+                "color": "#e39cd2",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "2xl1",
+              "decoration": {
+                "color": "#e39cd2",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "2xl2",
+              "decoration": {
+                "color": "#e074c7",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "2xl3",
+              "decoration": {
+                "color": "#e049bd",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "xl",
+              "decoration": {
+                "color": "#9ddee3",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "xl1",
+              "decoration": {
+                "color": "#9ddee3",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "xl2",
+              "decoration": {
+                "color": "#71dbe3",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
+            },
+            {
+              "breakpoint": "xl3",
+              "decoration": {
+                "color": "#36d5e0",
+                "fontStyle": "italic",
+                "fontWeight": "normal"
+              }
             }
-          },
-          {
-            "scope": "twbreak.xs2",
-            "settings": {
-              "foreground": "#6edd68",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.xs3",
-            "settings": {
-              "foreground": "#55de4e",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.sm",
-            "settings": {
-              "foreground": "#e18988",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.sm1",
-            "settings": {
-              "foreground": "#e18988",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.sm2",
-            "settings": {
-              "foreground": "#e55f5c",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.sm3",
-            "settings": {
-              "foreground": "#e4423f",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.md",
-            "settings": {
-              "foreground": "#ba96e3",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.md1",
-            "settings": {
-              "foreground": "#ba96e3",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.md2",
-            "settings": {
-              "foreground": "#ae7fe4",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.md3",
-            "settings": {
-              "foreground": "#9e60e6",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.lg",
-            "settings": {
-              "foreground": "#dbe3b6",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.lg1",
-            "settings": {
-              "foreground": "#dbe3b6",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.lg2",
-            "settings": {
-              "foreground": "#d1df92",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.lg3",
-            "settings": {
-              "foreground": "#c7dc66",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.xl",
-            "settings": {
-              "foreground": "#9ddee3",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.xl1",
-            "settings": {
-              "foreground": "#9ddee3",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.xl2",
-            "settings": {
-              "foreground": "#71dbe3",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.xl3",
-            "settings": {
-              "foreground": "#36d5e0",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.2xl",
-            "settings": {
-              "foreground": "#e39cd2",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.2xl1",
-            "settings": {
-              "foreground": "#e39cd2",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.2xl2",
-            "settings": {
-              "foreground": "#e074c7",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": "twbreak.2xl3",
-            "settings": {
-              "foreground": "#e049bd",
-              "fontStyle": "italic"
-            }
-          }
-        ]
+          ]
+        }
       }
     }
+  },
+  "scripts": {
+    "dev": "tsc -watch -p ./",
+    "build": "rimraf ./build && tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/vscode": "1.74.0",
+    "typescript": "4.9.4",
+    "rimraf": "6.0.1"
   }
 }
